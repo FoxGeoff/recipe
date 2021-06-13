@@ -1,13 +1,23 @@
+
+<!-- Not we need to import 'formsModule' in app.module to get ngForm working
+     this allows a Javascript object of the form to be built
+     EACH CONTROL has to be marked manually using 'ngModel' and 'name'
+     Make form submitable
+     Add method 'onSubmit(form: HTMLFormElement) and '<form (ngSubmit)="onSubmit(f) #f>'
+
+    Now add method onSubmit() and '<form (ngSubmit)="onSubmit(f) #f="ngForm">'
+-->
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <form>
+      <!--  on <form> no action="get" because we don't what 'submit' to cause an http request to the server -->
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm" >
         <div id="user-data">
           <div class="form-group">
             <label for="userName">User Name</label>
             <input type="text" id="userName" class="form-control" />
           </div>
-          <button class="btn btn-default">Suggest an User Name</button>
+          <button class="btn btn btn-secondary">Suggest an User Name</button>
 
           <div class="form-group">
             <label for="email">E-mail</label>

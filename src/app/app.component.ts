@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipe';
+
+  /* '<form (ngSubmit)="onSubmit(f) #f>'
+
+  onSubmit(form: HTMLFormElement) {
+    console.log(form);
+  } */
+
+  onSubmit(form: HTMLFormElement) {
+    console.log(form);
+  }
 }
