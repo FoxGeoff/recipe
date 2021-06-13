@@ -1,25 +1,30 @@
-<app-test-form></app-test-form>
-<form>
-  <div id="user-data">
-    <div class="form-group">
-      <label for="userName">User Name</label>
-      <input type="text" id="userName" class="form-control" />
-    </div>
-    <button class="btn btn-default">Suggest an User Name</button>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form>
+        <div id="user-data">
+          <div class="form-group">
+            <label for="userName">User Name</label>
+            <input type="text" id="userName" class="form-control" />
+          </div>
+          <button class="btn btn-default">Suggest an User Name</button>
 
-    <div class="form-group">
-      <label for="email">E-mail</label>
-      <input type="text" id="email" class="form-control" />
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" class="form-control" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="secret">Secret Question</label>
+          <select type="text" id="secret" class="form-control">
+            <option value="pet">Your first pet?</option>
+            <option value="teacher">Your first teacher?</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
     </div>
   </div>
-
-  <div class="form-group">
-    <label for="secret">Secret Question</label>
-    <select type="text" id="secret" class="form-control">
-      <option value="pet">Your first pet?</option>
-      <option value="teacher">Your first teacher?</option>
-    </select>
-  </div>
-
-  <button class="btn btn-primary" type="submit">Submit</button>
-</form>
+</div>
