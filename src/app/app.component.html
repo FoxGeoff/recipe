@@ -15,13 +15,13 @@
         <div id="user-data">
           <div class="form-group">
             <label for="userName">User Name</label>
-            <input type="text" id="userName" class="form-control" name="useName" ngModel/>
+            <input type="text" id="userName" class="form-control" name="useName" ngModel required/>
           </div>
           <button class="btn btn btn-secondary">Suggest an User Name</button>
 
           <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="text" id="email" class="form-control"  name="email" ngModel/>
+            <input type="text" id="email" class="form-control"  name="email" ngModel required email/>
           </div>
         </div>
 
@@ -33,7 +33,11 @@
           </select>
         </div>
 
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="!f.valid"
+        >Submit</button>
       </form>
     </div>
   </div>

@@ -19,3 +19,16 @@ onSubmit(form: NgForm) {
     console.log(form);
   }
 ```
+
+Task: Add validation 'rquired'
+
+1. Angular adds class to check ... ng-dirty ng-valid...
+2. Disable button if form not valid
+
+```TypeScript
+<button
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="!f.valid"
+        >Submit</button>
+```
