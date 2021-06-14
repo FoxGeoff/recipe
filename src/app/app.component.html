@@ -5,7 +5,7 @@
      Make form submitable
      Add method 'onSubmit(form: HTMLFormElement) and '<form (ngSubmit)="onSubmit(f) #f>'
 
-    Now add method onSubmit() and '<form (ngSubmit)="onSubmit(f) #f="ngForm">'
+    Now add method onSubmit(form: NgForm) and '<form (ngSubmit)="onSubmit(f) #f="ngForm">'
 -->
 <div class="container">
   <div class="row">
@@ -15,19 +15,19 @@
         <div id="user-data">
           <div class="form-group">
             <label for="userName">User Name</label>
-            <input type="text" id="userName" class="form-control" />
+            <input type="text" id="userName" class="form-control" name="useName" ngModel/>
           </div>
           <button class="btn btn btn-secondary">Suggest an User Name</button>
 
           <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="text" id="email" class="form-control" />
+            <input type="text" id="email" class="form-control"  name="email" ngModel/>
           </div>
         </div>
 
         <div class="form-group">
           <label for="secret">Secret Question</label>
-          <select type="text" id="secret" class="form-control">
+          <select type="text" id="secret" class="form-control" name="secret" ngModel>
             <option value="pet">Your first pet?</option>
             <option value="teacher">Your first teacher?</option>
           </select>

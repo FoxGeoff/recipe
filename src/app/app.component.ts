@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent {
     console.log(form);
   } */
 
-  onSubmit(form: HTMLFormElement) {
+  onSubmit(form: NgForm) {
     console.log(form);
   }
 }
