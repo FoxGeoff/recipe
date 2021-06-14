@@ -98,3 +98,7 @@ path is relative to root of project
 ### Task: Create components
 
 ![component plan](components.jpg)
+
+### Task: Using components
+
+### Task: Adding a Navigation Bar

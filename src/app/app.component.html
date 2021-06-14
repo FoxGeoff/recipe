@@ -1,44 +1,12 @@
+<app-header></app-header>
 
-<!-- Not we need to import 'formsModule' in app.module to get ngForm working
-     this allows a Javascript object of the form to be built
-     EACH CONTROL has to be marked manually using 'ngModel' and 'name'
-     Make form submitable
-     Add method 'onSubmit(form: HTMLFormElement) and '<form (ngSubmit)="onSubmit(f) #f>'
-
-    Now add method onSubmit(form: NgForm) and '<form (ngSubmit)="onSubmit(f) #f="ngForm">'
--->
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <!--  on <form> no action="get" because we don't what 'submit' to cause an http request to the server -->
-        <form (ngSubmit)="onSubmit(f)" #f="ngForm" >
-        <div id="user-data">
-          <div class="form-group">
-            <label for="userName">User Name</label>
-            <input type="text" id="userName" class="form-control" name="useName" ngModel required/>
-          </div>
-          <button class="btn btn btn-secondary">Suggest an User Name</button>
-
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="text" id="email" class="form-control"  name="email" ngModel required email/>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="secret">Secret Question</label>
-          <select type="text" id="secret" class="form-control" name="secret" ngModel>
-            <option value="pet">Your first pet?</option>
-            <option value="teacher">Your first teacher?</option>
-          </select>
-        </div>
-
-        <button
-        class="btn btn-primary"
-        type="submit"
-        [disabled]="!f.valid"
-        >Submit</button>
-      </form>
+    <div class="col-md-12">
+      <app-recipes></app-recipes>
+      <app-shopping-list></app-shopping-list>
     </div>
   </div>
 </div>
+<hr>
+<app-test-form></app-test-form>
