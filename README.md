@@ -94,3 +94,7 @@ path is relative to root of project
             "scripts": []
           },
 ```
+
+### Task: Create components
+
+![component plan](components.jpg)
