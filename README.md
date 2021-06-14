@@ -2,7 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
-## Kanban Tasks
+## Kanban Tasks: Project Refs
+
+1. Video Ref. <https://learning.oreilly.com/videos/angular-the-complete>
 
 ### Task: ngModel on template form
 
@@ -32,3 +34,43 @@ Task: Add validation 'rquired'
         [disabled]="!f.valid"
         >Submit</button>
 ```
+
+### Task: Radio Buttons
+
+1. ```<input type="radio">```
+
+### Task: @ViewChild()
+
+1. ```@ViewChild('f') signupForm" NgForm;```
+2. Gives access to a template component
+
+3. This is a method to change all the form values
+4. Video Ref <https://learning.oreilly.com/videos/angular-the-complete/9781788998437/9781788998437-video15_17/>
+
+![@ChildView](/ChildView.jpg)
+
+## Task: patchValue()
+
+1. This is a method to change one specific
+2. Uses a JavaScript literal 'user' user = {name: '', gender: ''...}
+
+![patchValue](PatchVal.jpg)
+
+## Task: output form summary on submit
+
+![Form summary output](FormSummary.jpg)
+
+![tempate dispay on submit](DisplayOnSubmit.jpg)
+
+## Task: Reset the form
+
+1. ```this.myform.reset( <optional default values>);```
+2. TODO: Asignment onsolution at end of Ch15
+
+### Task: Rective Forms: TODO: Asignment onsolution at end of Ch15
+
+### TODO: Ch16 Course Project - Forms
+
+### TODO: Chp19 Couse Project - Http
+
+### TODO: 'Angular Universal' pre rending on the server
