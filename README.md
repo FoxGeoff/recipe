@@ -71,6 +71,26 @@ Task: Add validation 'rquired'
 
 ### TODO: Ch16 Course Project - Forms
 
+1. something
+
 ### TODO: Chp19 Couse Project - Http
 
 ### TODO: 'Angular Universal' pre rending on the server
+
+## Chapter 3 : Course Project - The Basics
+
+### Task: Setting up the Application
+
+1. Add Bootstrap ```npm i bootstrap --save```
+2. Update file: angular.json for bundle generation
+3. plugin Emit
+
+```javascript
+path is relative to root of project
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+            "scripts": []
+          },
+```
