@@ -1,8 +1,9 @@
-<div class="row">
-  <div class="col-xs-12">
+<div class="row ">
+  <div class="col-xs-12 gy-3">
     <button class="btn btn-success">New Recipe</button>
   </div>
 </div>
+<hr>
 <div class="row">
   <div class="col-xs-12">
     <div class="list-group" *ngFor="let recipe of recipes">
@@ -13,8 +14,8 @@
             {{ recipe.description }}
           </div>
           <img
-            src="{{recipe.imagePath}}"
-            alt="Food Image"
+            [src]="recipe.imagePath"
+            alt="{{recipe.name}}"
             class="img-responsive"
             style="max-height: 50px"
           />
