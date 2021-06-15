@@ -5,15 +5,15 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-action ">
+    <div class="list-group" *ngFor="let recipe of recipes">
+      <a href="#" class="list-group-item list-group-item-action">
         <div class="d-flex w-100 justify-content-between">
           <div>
-            <h5 class="mb-1">List group item heading</h5>
-            Some placeholder content in a paragraph.
+            <h5 class="mb-1">{{ recipe.name }}</h5>
+            {{ recipe.description }}
           </div>
           <img
-            src="https://get.pxhere.com/photo/egg-dish-food-cuisine-ingredient-produce-menemen-recipe-comfort-food-brunch-meal-frittata-Queso-flameado-breakfast-side-dish-poached-egg-turkish-food-indian-cuisine-1620832.jpg"
+            src="{{recipe.imagePath}}"
             alt="Food Image"
             class="img-responsive"
             style="max-height: 50px"
