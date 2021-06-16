@@ -111,3 +111,5 @@ path is relative to root of project
 
 1. NOTE for Emmet in VSCode <https://code.visualstudio.com/docs/editor/emmet>
 2. NOTES <https://docs.emmet.io/actions/expand-abbreviation/>
+
+### Task: Working on the ShoppingList Component
