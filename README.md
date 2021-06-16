@@ -106,3 +106,8 @@ path is relative to root of project
 ### Task: Creating a "Recipe" Model
 
 ### Task: Adding Content to the Recipes' Components
+
+### Task: Displaying Recipe Details
+
+1. NOTE for Emmet in VSCode <https://code.visualstudio.com/docs/editor/emmet>
+2. NOTES <https://docs.emmet.io/actions/expand-abbreviation/>
