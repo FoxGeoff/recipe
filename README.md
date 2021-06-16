@@ -113,3 +113,5 @@ path is relative to root of project
 2. NOTES <https://docs.emmet.io/actions/expand-abbreviation/>
 
 ### Task: Working on the ShoppingList Component
+
+### Task: ShoppingEdit Component
