@@ -115,3 +115,11 @@ path is relative to root of project
 ### Task: Working on the ShoppingList Component
 
 ### Task: ShoppingEdit Component
+
+### Task: Binding to Custom Properties
+
+1. ref <https://learning.oreilly.com/videos/angular-the-complete/9781788998437/9781788998437-video5_4/>
+
+### Task: Binding to Custom Events
+
+1. ref <https://learning.oreilly.com/videos/angular-the-complete/9781788998437/9781788998437-video5_6/>
