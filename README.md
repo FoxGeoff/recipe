@@ -123,3 +123,27 @@ path is relative to root of project
 ### Task: Binding to Custom Events
 
 1. ref <https://learning.oreilly.com/videos/angular-the-complete/9781788998437/9781788998437-video5_6/>
+
+2. See Project:github/kata-output
+
+3. We can define:```Encapsulation: Emulated(default) | native | None```
+
+4. Local ref: #everNameIput (template ref to be use any where in the template, but only there )
+
+### Task: Getting Access to the Template and Document Object Model (DOM) with the @ViewChild Component
+
+1. ref <https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video5_12/>
+
+2. ```@ViewChild('varNameLocal', {static: true}, varName): ElementRef```  #varNameLocal is the DOM elemen local var
+3. NB we could aslo use ```@ViewChild(ChildComponent, {static: true}, childComponent)``` to ref a child component
+4. ```this.varName.nativeElement.value``` to get the underlying element props
+
+### Task: Projecting Content into Components with ng-content
+
+1. Ref:<https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video5_13/>
+2. ```<ng-content><ng-content>```
+3. ```<app-component> <h1>Geoff</h1></app-component>```
+
+### Task: Understanding the Component Lifecycle
+
+1. Ref:<https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video5_14/>
