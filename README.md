@@ -147,3 +147,12 @@ path is relative to root of project
 ### Task: Understanding the Component Lifecycle
 
 1. Ref:<https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video5_14/>
+
+### Notes on Angular event hooks
+
+1. ngOnChanges - after a bound input property changes @Input() - called multipal times
+2. ngOnInit - once the component is initialized, not that you can see it, runs after the constructor - called once
+3. ngDoCheck - every time change detection runs - each change in the template, and even of checks that don't result in a template update (button click etc) - call multipal times
+4. ngAfterContentInit - after content (ng-content) has been projected into view (parent template)
+5. ngAfterViewInit -after component and child views have been initialized
+6. ngOnDestroy - once the component is about to be destroyed (place for cleanup work)
