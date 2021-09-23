@@ -8,6 +8,12 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'recipe';
+  
+  loadedFeature = 'recipe';
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 
   /* '<form (ngSubmit)="onSubmit(f) #f>'
 
@@ -18,4 +24,5 @@ export class AppComponent {
   onSubmit(form: NgForm) {
     console.log(form);
   }
+
 }

@@ -11,7 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 1. Check values on templated-form using ngModel
 2. Check: each control has ngModel and name atributes
 3. Check: formsModule add to app.module
-4. Check: ```<form (ngSubmit)="onSubmit(f)" #f="ngForm" >```
+4. Check: `<form (ngSubmit)="onSubmit(f)" #f="ngForm" >`
 5. Fill out form and look for user values
 
 ![Check ngModel ](/check-form-vals.jpg)
@@ -37,11 +37,11 @@ Task: Add validation 'rquired'
 
 ### Task: Radio Buttons
 
-1. ```<input type="radio">```
+1. `<input type="radio">`
 
 ### Task: @ViewChild()
 
-1. ```@ViewChild('f') signupForm" NgForm;```
+1. `@ViewChild('f') signupForm" NgForm;`
 2. Gives access to a template component
 
 3. This is a method to change all the form values
@@ -64,7 +64,7 @@ Task: Add validation 'rquired'
 
 ## Task: Reset the form
 
-1. ```this.myform.reset( <optional default values>);```
+1. `this.myform.reset( <optional default values>);`
 2. TODO: Asignment onsolution at end of Ch15
 
 ### Task: Rective Forms: TODO: Asignment onsolution at end of Ch15
@@ -81,7 +81,7 @@ Task: Add validation 'rquired'
 
 ### Task: Setting up the Application
 
-1. Add Bootstrap ```npm i bootstrap --save```
+1. Add Bootstrap `npm i bootstrap --save`
 2. Update file: angular.json for bundle generation
 3. plugin Emit
 
@@ -126,7 +126,7 @@ path is relative to root of project
 
 2. See Project:github/kata-output
 
-3. We can define:```Encapsulation: Emulated(default) | native | None```
+3. We can define:`Encapsulation: Emulated(default) | native | None`
 
 4. Local ref: #everNameIput (template ref to be use any where in the template, but only there )
 
@@ -134,15 +134,15 @@ path is relative to root of project
 
 1. ref <https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video5_12/>
 
-2. ```@ViewChild('varNameLocal', {static: true}, varName): ElementRef```  #varNameLocal is the DOM elemen local var
-3. NB we could aslo use ```@ViewChild(ChildComponent, {static: true}, childComponent)``` to ref a child component
-4. ```this.varName.nativeElement.value``` to get the underlying element props
+2. `@ViewChild('varNameLocal', {static: true}, varName): ElementRef` #varNameLocal is the DOM elemen local var
+3. NB we could aslo use `@ViewChild(ChildComponent, {static: true}, childComponent)` to ref a child component
+4. `this.varName.nativeElement.value` to get the underlying element props
 
 ### Task: Projecting Content into Components with ng-content
 
 1. Ref:<https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video5_13/>
-2. ```<ng-content><ng-content>```
-3. ```<app-component> <h1>Geoff</h1></app-component>```
+2. `<ng-content><ng-content>`
+3. `<app-component> <h1>Geoff</h1></app-component>`
 
 ### Task: Understanding the Component Lifecycle
 
@@ -156,3 +156,74 @@ path is relative to root of project
 4. ngAfterContentInit - after content (ng-content) has been projected into view (parent template)
 5. ngAfterViewInit -after component and child views have been initialized
 6. ngOnDestroy - once the component is about to be destroyed (place for cleanup work)
+
+### Task: Adding Navigation with Event Binding and the ngIf Directive
+
+1. Ref:<https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video6_2/>
+2. Navigation using events - ```@Output() featureSelected = new EventEmitter<string>();```
+
+```Typescript
+// header.component.ts
+export class HeaderComponent implements OnInit {
+ @Output() featureSelected = new EventEmitter<string>();
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  onSelect(feature: string) {
+    this.featureSelected.emit(feature);
+  }
+}
+```
+
+```html
+<!-- header.component.html -->
+<div class="collapse navbar-collapse">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a
+        class="nav-link active"
+        (click)="onSelect('recipe')"
+        aria-current="page"
+        href="#"
+        >Recipes</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        (click)="onSelect('shopping-list')"
+        aria-current="page"
+        href="#"
+        >Shopping List</a
+      >
+    </li>
+  </ul>
+</div>
+```
+
+```Typescript
+// Parent component
+export class AppComponent {
+  title = 'recipe';
+
+  loadedFeature = 'recipe';
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
+```
+
+```html
+<!-- app.component.html -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="loadedFeature !=='recipe'"></app-shopping-list>
+    </div>
+  </div>
+</div>
+```
