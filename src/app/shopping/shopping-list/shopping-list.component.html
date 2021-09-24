@@ -1,7 +1,9 @@
 <small>shopping-list works!</small>
 <div class="row">
   <div class="col-xs-10">
-    <app-shopping-edit></app-shopping-edit>
+    <app-shopping-edit
+      (ingredientAdded)="onIngrdientAdded($event)"
+    ></app-shopping-edit>
     <hr />
     <ul class="list-group" *ngFor="let item of ingredients">
         <a

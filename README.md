@@ -264,3 +264,39 @@ export class ShoppingEditComponent implements OnInit {
               Add
             </button>
 ```
+
+```typescript
+// method #2 @ViewChild()
+export class ShoppingEditComponent implements OnInit {
+
+  @ViewChild('nameInput') nameInputRef!: ElementRef;
+  @ViewChild('amountInput') amountInputRef!: ElementRef;
+
+  @Output() ingredientAdded = new EventEmitter<Ingredient>()
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+  /* using template properties
+  onAddItem(nameInput: HTMLInputElement, amountInput: HTMLInputElement) {
+    console.log(`item ${nameInput.value}, qty ${amountInput.value}`);
+  }
+  */
+  onAddItem() {
+    const ingName = this.nameInputRef.nativeElement.value;
+    const ingAmount = this.amountInputRef.nativeElement.value;
+
+    const newIngredient = new Ingredient(ingName, ingAmount);
+    this.ingredientAdded.emit(newIngredient);
+
+    //debug
+    console.log(`Item: ${ingName} qty ${ingAmount}`);
+  }
+
+}
+```
+
+```html
+<!-- method #2 @ViewChild() shoping-list component-->
+
+```
