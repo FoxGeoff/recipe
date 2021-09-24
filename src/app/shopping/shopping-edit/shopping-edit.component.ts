@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Form, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-shopping-edit',
@@ -12,4 +13,7 @@ export class ShoppingEditComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onAddItem(nameInput: HTMLInputElement, amountInput: HTMLInputElement) {
+    console.log(`item ${nameInput.value}, qty ${amountInput.value}`);
+  }
 }

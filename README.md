@@ -227,3 +227,40 @@ export class AppComponent {
   </div>
 </div>
 ```
+
+### Task: Passing Recipe Data with Property Binding
+
+1. Ref:<https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video6_3/>
+2. Chapter 6 : Course Project - Components and Data Binding
+
+```typescript
+// method #1
+export class ShoppingEditComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  onAddItem(nameInput: HTMLInputElement, amountInput: HTMLInputElement) {
+    console.log(`item ${nameInput.value}, qty ${amountInput.value}`);
+  }
+}
+```
+
+```html
+<!--  method #1 -->
+<div class="col-sm-2 form-group">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" class="form-control" #amountInput />
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button
+              class="btn btn-success mr-1"
+              type="submit"
+              (click)="onAddItem(nameInput, amountInput)"
+            >
+              Add
+            </button>
+```
