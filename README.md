@@ -304,6 +304,14 @@ export class ShoppingEditComponent implements OnInit {
 ### Task: Passing Data with Event and Property Binding (Combined)
 
 1. Ref: <https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video6_4/>
+2. Video explaines use of ```<ng-template>``` as shown below
+
+```html
+<app-recipe-detail *ngIf="selectedRecipe; else infoText"></app-recipe-detail>
+<ng-template #infoText>
+  <p>Please select a recipe!</p>
+</ng-template> 
+```
 
 ```typescript
 @Output() recipeSelected = new EventEmitter<Recipe>()
