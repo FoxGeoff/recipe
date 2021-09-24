@@ -23,7 +23,7 @@ export class RecipeListComponent implements OnInit {
       'https://get.pxhere.com/photo/egg-dish-food-cuisine-ingredient-produce-menemen-recipe-comfort-food-brunch-meal-frittata-Queso-flameado-breakfast-side-dish-poached-egg-turkish-food-indian-cuisine-1620832.jpg'),
     new Recipe(
       'Shak Shuka',
-      'Just a test of the fantastic tomato and egg dish.',
+      'Just another test of the fantastic tomato and egg dish.',
       'https://get.pxhere.com/photo/egg-dish-food-cuisine-ingredient-produce-menemen-recipe-comfort-food-brunch-meal-frittata-Queso-flameado-breakfast-side-dish-poached-egg-turkish-food-indian-cuisine-1620832.jpg')
   ];
 
