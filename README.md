@@ -300,3 +300,57 @@ export class ShoppingEditComponent implements OnInit {
 <!-- method #2 @ViewChild() shoping-list component-->
 
 ```
+
+### Task: Passing Data with Event and Property Binding (Combined)
+
+1. Ref: <https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video6_4/>
+
+```typescript
+@Output() recipeSelected = new EventEmitter<Recipe>()
+...
+onSelectedRecipe(recipe: Recipe) {
+    const recipeName = recipe.name;
+    const recipeDescription = recipe.description;
+    const recipeImage = recipe.imagePath;
+    const selectedRecipe = new Recipe(recipeName, recipeDescription, recipeImage);
+    this.recipeSelected.emit(selectedRecipe);
+
+    //debug
+    console.log(`name ${recipeName} - description ${recipeDescription}`)
+  }
+```
+
+```html
+    <div
+      class="list-group"
+      (click)="onSelectedRecipe(recipe)"
+      *ngFor="let recipe of recipes"
+    >
+
+```
+
+```typescript
+  onRecipeSelected(recipe: Recipe) {
+    this.selectedRecipe = recipe;
+  }
+```
+
+```html
+<div class="row">
+  <div class="col-md-5">
+    <app-recipe-list (recipeSelected)="onRecipeSelected($event)" ></app-recipe-list>
+  </div>
+  <div class="col-md-7">
+    <app-recipes-detail [recipe]="selectedRecipe" ></app-recipes-detail>
+  </div>
+</div>
+```
+
+```html
+<!-- note use of *ngIf -->
+<div class="row">
+  <h4 *ngIf="recipe">Recipe: {{recipe.name}}</h4>
+  <h6 *ngIf="recipe"> {{recipe.description}}</h6>
+</div>
+
+```
