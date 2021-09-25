@@ -362,3 +362,9 @@ onSelectedRecipe(recipe: Recipe) {
 </div>
 
 ```
+
+### Task: Allowing the User to Add Ingredients to the Shopping List
+
+1. <https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video6_5/>
+2. TODO impliment the buttons on the shopping list form (exercise for student)
+3. TODO refactor last task to use the methods descriped in the book
