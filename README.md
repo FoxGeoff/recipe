@@ -386,3 +386,28 @@ onSelectedRecipe(recipe: Recipe) {
 1. Ref:<https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video7_4/>
 
 ### Task Add a custom directive
+
+```Typescript
+import { Directive, ElementRef, OnInit } from "@angular/core";
+
+@Directive({
+  selector: '[appBasicHighlit]'
+})
+export class BasicHighlightDirective implements OnInit {
+  constructor(private elementRef: ElementRef) { }
+
+  ngOnInit() {
+    this.elementRef.nativeElement.style.backgroundColor = 'green';
+  }
+
+} 
+```
+
+```html
+<!-- remember to register in the module, just like a component -->
+<p appBasicHighlit>Style me with basic directive</p>
+```
+
+1. A better version that does not modify the DOM because Angular can render a template independent of the DOM
+
+### Task: Using the @HostListener() Decorator to Listen to Host Events
