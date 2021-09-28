@@ -3,9 +3,10 @@
   <div class="col-xs-10">
     <app-shopping-edit
       (ingredientAdded)="onIngrdientAdded($event)"
+      (ingredientSelected)="onIngredientSelected($event)"
     ></app-shopping-edit>
     <hr />
-    <ul class="list-group" *ngFor="let item of ingredients">
+    <ul class="list-group" (click)="onIngredientSelected(item)" *ngFor="let item of ingredients">
         <a
         class="list-group-item"
         style="cursor: pointer"

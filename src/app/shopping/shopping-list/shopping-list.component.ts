@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Ingredient } from 'src/app/shared/ingredient.model';
 
 @Component({
@@ -7,6 +7,8 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
+
+  @Output() ingredientSelected = new EventEmitter<Ingredient>();
 
   ingredients: Ingredient[] = [
     new Ingredient('Apples', 5),
@@ -20,5 +22,9 @@ export class ShoppingListComponent implements OnInit {
 
   onIngrdientAdded(ingredient:Ingredient) {
     this.ingredients.push(ingredient);
+  }
+
+  onIngredientSelected(ingredient: Ingredient) {
+    this.ingredientSelected.emit(ingredient);
   }
 }

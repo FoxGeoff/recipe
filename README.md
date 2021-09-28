@@ -370,3 +370,17 @@ onSelectedRecipe(recipe: Recipe) {
 3. TODO - refactor last task to use the methods descriped in the book
 
 ### Task: Add on the recipes buttons, Delete and Clear
+
+## Chapter 7 : Directives Deep Dive
+
+### Introduction
+
+1. Ref:<https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video7_1/>
+2. Directive Types ```Attribute DIrectives``` and ```Structural Directives```
+3. Structural Directives: ```*ngIf="..."``` and ```*ngFor="let item of items"```
+4. Attribute Directives: [ngClass]="className":condition===value? 'trueVal' :'falseVal'
+5. Attribute Directives: [ngStyle]="{background-color: condition===value? 'trueVal' :'falseVal' }
+
+### Task: Creating a Basic Attribute Directive
+
+1. Ref:<https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video7_4/>

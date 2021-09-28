@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output, Input } from '@angular/core';
 import { Form, NgForm } from '@angular/forms';
 import { Ingredient } from 'src/app/shared/ingredient.model';
 
@@ -13,6 +13,9 @@ export class ShoppingEditComponent implements OnInit {
   @ViewChild('amountInput') amountInputRef!: ElementRef;
 
   @Output() ingredientAdded = new EventEmitter<Ingredient>()
+
+  @Input() ingredientSelected!: Ingredient;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -31,6 +34,16 @@ export class ShoppingEditComponent implements OnInit {
 
     //debug
     console.log(`Item: ${ingName} qty ${ingAmount}`);
+  }
+
+  OnDeleteItem(ingredientSelected: Ingredient) {
+    if(ingredientSelected) {
+      // post "Delete Ingredent OK?"
+      // Raise an Event onIngredientDelete(ingredientSelected)
+      // delete select ingredient form Ingredients
+    } else {
+      // post "Select an Ingredient" Template
+    }
   }
 
 }
