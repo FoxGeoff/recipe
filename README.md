@@ -409,5 +409,23 @@ export class BasicHighlightDirective implements OnInit {
 ```
 
 1. A better version that does not modify the DOM because Angular can render a template independent of the DOM
+2. Why? with say service workers we don't have access to the DOM
+3. inject ```Render2```
+
+```TypeScript
+import { Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
+
+@Directive({
+  selector: '[BetterHighlightDirectiveDirective]'
+})
+export class BetterHighlightDirectiveDirective implements OnInit {
+
+  constructor(private elRef:ElementRef, private renderer: Renderer2) { }
+
+  ngOnInit() {
+    this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'blue');
+  }
+}
+```
 
 ### Task: Using the @HostListener() Decorator to Listen to Host Events
