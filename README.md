@@ -436,6 +436,7 @@ export class BetterHighlightDirectiveDirective implements OnInit {
 ```Typescript
 /**
  * Allows change of style per mouse
+ * USE THIS AS A FULL FEATURED EXAMPLE
  */
 
 import { Directive, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
@@ -461,4 +462,3 @@ export class BetterHighlightDirectiveDirective implements OnInit {
 
 }
 ```
-
