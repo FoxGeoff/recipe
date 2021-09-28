@@ -6,13 +6,14 @@
       (ingredientSelected)="onIngredientSelected($event)"
     ></app-shopping-edit>
     <hr />
-    <ul class="list-group" (click)="onIngredientSelected(item)" *ngFor="let item of ingredients">
-        <a
-        class="list-group-item"
-        style="cursor: pointer"
-        >
-          {{ item.name }} ({{ item.amount }})
-        </a>
+    <ul
+      class="list-group"
+      (click)="onIngredientSelected(item)"
+      *ngFor="let item of ingredients"
+    >
+      <a class="list-group-item" style="cursor: pointer">
+        {{ item.name }} ({{ item.amount }})
+      </a>
     </ul>
   </div>
 </div>
