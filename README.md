@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Kanban Tasks: Project Refs
 
 1. Video Ref. <https://learning.oreilly.com/videos/angular-the-complete>
+2. Code Ref. <https://github.com/PacktPublishing/Angular---The-Complete-Guide-2021-Edition>
 
 ### Task: ngModel on template form
 
@@ -471,3 +472,4 @@ export class BetterHighlightDirectiveDirective implements OnInit {
 ### Task: Binding to Directive Properties
 
 1. Ref: <https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video7_8/>
+2. Add a drop-down directive Ref <https://www.positronx.io/using-renderer2-angular/>
