@@ -11,10 +11,11 @@ export class ShoppingEditComponent implements OnInit {
 
   @ViewChild('nameInput') nameInputRef!: ElementRef;
   @ViewChild('amountInput') amountInputRef!: ElementRef;
-
   @Output() ingredientAdded = new EventEmitter<Ingredient>()
 
-  @Input() ingredientSelected!: Ingredient;
+  @Input() ingredientToDelete!: Ingredient;
+  msgIngredient = "Please select an ingredient from he list";
+
 
   constructor() { }
 
@@ -36,13 +37,17 @@ export class ShoppingEditComponent implements OnInit {
     console.log(`Item: ${ingName} qty ${ingAmount}`);
   }
 
-  OnDeleteItem(ingredientSelected: Ingredient) {
-    if(ingredientSelected) {
+  OnDeleteItem() {
+
+    if (this.ingredientToDelete) {
       // post "Delete Ingredent OK?"
       // Raise an Event onIngredientDelete(ingredientSelected)
       // delete select ingredient form Ingredients
+      this.msgIngredient="";
+      //debug code
+      console.log(`OnDeleteItem:`, this.ingredientToDelete);
     } else {
-      // post "Select an Ingredient" Template
+      this.msgIngredient = "Please select an ingredient from he list"
     }
   }
 

@@ -369,7 +369,7 @@ onSelectedRecipe(recipe: Recipe) {
 2. TODO - impliment the buttons on the shopping list form (exercise for student)
 3. TODO - refactor last task to use the methods descriped in the book
 
-### Task: Add on the recipes buttons, Delete and Clear
+### Task: Add on the ingredients buttons, Delete and Clear
 
 ## Chapter 7 : Directives Deep Dive
 
@@ -462,3 +462,12 @@ export class BetterHighlightDirectiveDirective implements OnInit {
 
 }
 ```
+
+### Task: Using the @HostBinding() Decorator to Bind to Host Properties
+
+1. Ref: <https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video7_7/>
+2. TODO WIP
+
+### Task: Binding to Directive Properties
+
+1. Ref: <https://learning.oreilly.com/videos/angular-the/9781788998437/9781788998437-video7_8/>

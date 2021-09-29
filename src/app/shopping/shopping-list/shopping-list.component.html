@@ -1,11 +1,11 @@
-<small>shopping-list works!</small>
 <div class="row">
   <div class="col-xs-10">
     <app-shopping-edit
       (ingredientAdded)="onIngrdientAdded($event)"
-      (ingredientSelected)="onIngredientSelected($event)"
+      [ingredientToDelete] = "ingredient"
     ></app-shopping-edit>
     <hr />
+    <p *ngIf="ingredient">selected ingredient: {{ingredient.name}}</p>
     <ul
       class="list-group"
       (click)="onIngredientSelected(item)"
